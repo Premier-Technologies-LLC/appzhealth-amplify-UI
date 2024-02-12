@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #E9E6E1;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +35,66 @@
   to {
     transform: rotate(360deg);
   }
+} 
+
+:root, [data-amplify-theme] {
+  --color-0: #5E8A75;
+  --color-1: #C4B5A0;
+  --color-2: #77A2C4;
+  --color-3: #2B475C;
+  --color-4: #D28640;
+  --color-5: #3B6562;
+  --color-6: #6D5044;
+  --color-7: #E3D3BD;
+
+  --text-color-appz: #2B475C;
+  --font-appz: 'Oranienbaum', sans-serif;
+
+  --text-color-healthcare-fintech: #2B475C;
+  --font-healthcare-fintech: 'Josefin Sans', sans-serif;
+
+  --background-color: #E9E6E1;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-appz);
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: var(--background-color);
+  background-size: cover;
+  padding: 20px;
+  color: var(--text-color-appz);
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+h2 {
+  font-family: var(--font-healthcare-fintech);
+  font-weight: 600;
+  color: var(--text-color-healthcare-fintech);
+}
+
+/* Add new styles for the login page */
+.login-container {
+  background-color: var(--background-color);
+  padding: 20px;
+  color: var(--text-color-appz);
+  font-family: var(--font-appz);
+}
+
+.login-title {
+  font-family: var(--font-healthcare-fintech);
+  font-weight: 600;
+  color: var(--text-color-healthcare-fintech);
+  margin-bottom: 20px;
 }

@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-appzhealthamplify-dev-83203-authRole",
+      "UnauthRoleArn": "arn:aws:iam::975050259727:role/amplify-appzhealthamplify-dev-83203-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::975050259727:role/amplify-appzhealthamplify-dev-83203-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-appzhealthamplify-dev-83203-deployment",
+      "UnauthRoleName": "amplify-appzhealthamplify-dev-83203-unauthRole",
+      "StackName": "amplify-appzhealthamplify-dev-83203",
+      "StackId": "arn:aws:cloudformation:us-east-2:975050259727:stack/amplify-appzhealthamplify-dev-83203/76e79fa0-bd18-11ee-b024-063bd7523d01",
+      "AmplifyAppId": "d2188gwh41kbgf"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d2188gwh41kbgf",
+          "type": "manual"
+        }
+      },
+      "auth": {
+        "appzhealthamplify1e1a1d4c": {}
+      }
+    }
+  }
+}
