@@ -1,0 +1,33 @@
+name: CI Pipeline
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy_to_main:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Changes Detected
+        run: |
+          echo "Changes have been detected on the main branch"
+          echo "The most recent commit message is: ${GITHUB_SHA}"
+      - uses: actions/checkout@v3
+      - name: Deploy to Dev Server
+        uses: appleboy/ssh-action@master
+        with:
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SERVER_KEY }}
+          host: ${{ secrets.SERVER_IP }}
+          port: ${{ secrets.SERVER_PORT }}
+          script: |
+            cd /var/www/bash
+            ./health.sh
+      - name: Send Slack notification on success
+        if: ${{ success() }}
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_MESSAGE: "🚀 Appz Health Frontend Code Deployed Successfully on Dev Server 🚀\n\nPlease verify your changes."
+          SLACK_COLOR: '#00FF00'
